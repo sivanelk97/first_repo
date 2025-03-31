@@ -59,7 +59,7 @@ jobs:
           blueprint: githubRepository
           properties: |-
             {
-              "resource_definitions": "${{ github.server_url }}/${{ github.repository_owner }}/${{ fromJson(inputs.port_context).entity }}/blob/main/resources/"
+              "resource_definitions": "${{ github.server_url }}/${{ fromJson(inputs.port_context).entity }}/blob/main/resources/"
             }
           clientId: ${{ secrets.PORT_CLIENT_ID }}
           clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
