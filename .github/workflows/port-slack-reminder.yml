@@ -1,0 +1,35 @@
+# port-slack-reminder.yml
+
+name: Generate Scorecards Reminders
+on:
+  workflow_dispatch:
+    inputs:
+      runId:
+        description: 'The id of the action run'
+        required: true
+        type: string
+jobs:
+    generate-scorecards-reminders:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Generate Scorecards Reminders
+              uses: port-labs/port-sender@v0.2.14
+              with:
+                operation_kind: scorecard_reminder
+                port_client_id: ${{ secrets.PORT_CLIENT_ID }}
+                port_client_secret: ${{ secrets.PORT_CLIENT_SECRET }}
+                port_region: eu
+                slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+                blueprint: service
+                scorecard: ProductionReadiness
+                target_kind: slack
+            - name: Report status to Port
+              uses: port-labs/port-github-action@v1
+              with:
+                clientId: ${{ secrets.PORT_CLIENT_ID }}
+                clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+                baseUrl: https://api.getport.io
+                operation: PATCH_RUN
+                runId: ${{ inputs.runId }}
+                logMessage: |
+                    Slack reminder sent successfully 🚀
