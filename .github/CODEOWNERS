@@ -1,2 +1,26 @@
-# owner for everything in the repo
-* @sivanelk97
+# Default owner for all files in the repo
+*                @sivane
+
+# Backend ownership
+/backend/         @backend-team
+
+# Frontend ownership (multiple owners)
+/frontend/        @frontend-team @design-lead
+
+# Specific file
+/README.md        @docs-team
+
+# JavaScript files in any folder
+**/*.js           @frontend-team
+
+# Terraform files anywhere
+**/*.tf           @infra-team
+
+# CI/CD workflows
+.github/workflows/  @devops-team
+
+# Markdown documentation files
+*.md              @docs-team
+
+# Config files named 'config.yaml' in any folder
+**/config.yaml    @platform-engineers
