@@ -2,25 +2,25 @@
 *                @sivanelk97
 
 # Backend ownership
-/backend/         @backend-team
+/backend/         @sivanelk97
 
 # Frontend ownership (multiple owners)
-/frontend/        @frontend-team @design-lead
+/frontend/        @sivanelk97
 
 # Specific file
-/README.md        @docs-team
+/README.md        @sivanelk97
 
 # JavaScript files in any folder
-**/*.js           @frontend-team
+**/*.js           @sivanelk97
 
 # Terraform files anywhere
-**/*.tf           @infra-team
+**/*.tf          @sivanelk97
 
 # CI/CD workflows
-.github/workflows/  @devops-team
+.github/workflows/  @sivanelk97
 
 # Markdown documentation files
-*.md              @docs-team
+*.md              @sivanelk97
 
 # Config files named 'config.yaml' in any folder
-**/config.yaml    @platform-engineers
+**/config.yaml    @sivanelk97
