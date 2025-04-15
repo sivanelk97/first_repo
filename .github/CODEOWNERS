@@ -20,7 +20,7 @@
 .github/workflows/  @sivanelk97
 
 # Markdown documentation files
-*.md              @sivanelk97 @org-name/docs-team
+*.md              @sivanelk97
 
 # Config files named 'config.yaml' in any folder
 **/config.yaml    @sivanelk97
