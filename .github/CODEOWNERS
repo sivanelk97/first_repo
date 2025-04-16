@@ -19,8 +19,8 @@
 # CI/CD workflows
 .github/workflows/  @sivanelk97
 
-# Markdown documentation files
-*.md              @sivanelk97
-
 # Config files named 'config.yaml' in any folder
 **/config.yaml    @sivanelk97
+
+# Markdown documentation files
+*.md              @sivanelk97 @sivan27
