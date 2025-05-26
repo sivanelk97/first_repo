@@ -16,8 +16,8 @@ jobs:
           type: azure
           port_client_id: ${{ secrets.PORT_CLIENT_ID }}
           port_client_secret: ${{ secrets.PORT_CLIENT_SECRET }}
-					port_base_url: "https://api.getport.io"
-					config: |
-						azure_client_id: ${{ secrets.OCEAN__SECRET__AZURE_CLIENT_ID }}
-						azure_client_secret: ${{ secrets.OCEAN__SECRET__AZURE_CLIENT_SECRET }}
-						azure_tenant_id: ${{ secrets.OCEAN__SECRET__AZURE_TENANT_ID }}
+          port_base_url: "https://api.getport.io"
+          config: |
+          azure_client_id: ${{ secrets.OCEAN__SECRET__AZURE_CLIENT_ID }}
+          azure_client_secret: ${{ secrets.OCEAN__SECRET__AZURE_CLIENT_SECRET }}
+          azure_tenant_id: ${{ secrets.OCEAN__SECRET__AZURE_TENANT_ID }}
