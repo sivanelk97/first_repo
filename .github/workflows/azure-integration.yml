@@ -3,7 +3,7 @@ name: Azure Exporter Workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/1 * * * *' # Determines the scheduled interval for this workflow. This example runs every 5 minutes.
+    - cron: '0 */4 * * *' 
 
 jobs:
   run-integration:
