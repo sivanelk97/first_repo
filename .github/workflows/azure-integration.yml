@@ -3,12 +3,11 @@ name: Azure Exporter Workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */4 * * *' # Determines the scheduled interval for this workflow. This example runs every 4 hours.
+    - cron: '*/1 * * * *' # Determines the scheduled interval for this workflow. This example runs every 5 minutes.
 
 jobs:
   run-integration:
     runs-on: ubuntu-latest
-
     steps:
       - name: Run azure Integration
         uses: port-labs/ocean-sail@v1
