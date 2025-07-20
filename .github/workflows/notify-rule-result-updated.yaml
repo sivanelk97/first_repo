@@ -21,4 +21,4 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"The rule result ${{ inputs.rule_result_name }} has been updated. See evaluated entity: https://app.port.io/${{ inputs.entity_link }}"}' $SLACK_WEBHOOK_URL
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"The rule result ${{ inputs.rule_result_name }} has been updated. See evaluated entity: https://app.port.io${{ inputs.entity_link }}"}' $SLACK_WEBHOOK_URL
