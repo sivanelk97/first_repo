@@ -1,0 +1,30 @@
+name: Create issue when rule is degraded
+
+on:
+  workflow_dispatch:
+    inputs:
+      # Note that the inputs are the same as the payload (workflowInputs) defined in the automation
+      rule_result_name:
+        description: 'The rule result name'
+        required: true
+        type: string
+      entity_link:
+        description: 'A link to the evaluated entity'
+        required: true
+        type: string
+
+jobs:
+  send_message:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: create an issue
+      uses: dacbd/create-issue-action@main
+      with:
+        token: ${{ github.token }}
+        # By default, the issue will be created in the same repository as the workflow
+        repo: ${{ github.context.repo.repo}}
+        title: '${{ inputs.rule_result_name }} - degraded rule result'
+        body: |
+          The rule result ${{ inputs.rule_result_name }} has been degraded.
+          See evaluated entity: ${{ inputs.entity_link }}
