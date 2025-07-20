@@ -27,4 +27,4 @@ jobs:
         title: '${{ inputs.rule_result_name }} - degraded rule result'
         body: |
           The rule result ${{ inputs.rule_result_name }} has been degraded.
-          See evaluated entity: ${{ inputs.entity_link }}
+          See evaluated entity: https://app.port.io${{ inputs.entity_link }}
